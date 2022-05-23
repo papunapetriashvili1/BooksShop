@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <div class="topnav">
+            <a href="../main/welcomePage.html">Home</a>
+            <a  href="../main/bookPage.html">Books</a>
+            <a href="#">Order Form</a>
+            
+          </div>
+    
+    <div class="container background">
+        <header class="header">
+            <h1 id="title" class="text-center">Order Form</h1>
+           <p  class="description text-center"> Please fill out the form below </p>
+          </header>
+    <form id="surveyForm"  onkeyup="checkForm()" autocomplete="off" novalidate>
+        <div class="formGroup">
+            <label id="firstname-label" for="firstname">First Name:* </label>
+            <input type="text"  onkeydown="return /[a-z]/i.test(event.key)" name="fname" id="firstname-label" class="formControl" placeholder="Enter your first name"  minlength="4"  required/>
+          </div>
+        
+          <div class="formGroup">
+            <label id="lastname-label" for="lastname">Last Name:* </label>
+            <input type="text" onkeydown="return /[a-z]/i.test(event.key)" name="lname" id="lastname-label" class="formControl" placeholder="Enter your Last name"  minlength="5" required/>
+          </div>
+        
+        <div  class="formGroup">
+            <label for="deliveryDate" >Delivery date:*  </label>
+            <br>
+            <input type="date" id="formdate" required/>
+        </div>
+
+        <div class="formGroup">
+            <label id="street-label" name="street" for="street">Street:* </label>
+            <input type="text"  name="street" id="street-label" class="formControl" placeholder="Enter your Street"  minlength="5" required/>
+        </div>
+
+        <div class="formGroup">
+            <label id="number-label" name="house" for="streetnumber"> House Number:* </label>
+            <input type="number" name ="house" id="number-label" class="formControl" placeholder="Enter House Number" min="0" required>
+        </div>
+
+        <div class="formGroup">
+            <label id="number-label" name="flat" for="flatnumber"> Flat Number:* </label>
+            <input type="number" name ="flat" id="number-label" class="formControl" pattern="[0-9\-]+" placeholder="Enter Flat Number" min="0" required>
+        </div>
+
+        <div >
+            <h3>Choose Payment Method:*</h3>
+            <input type="radio" name="radio1" required>
+            <label for="cash" >Cash</label>
+        </div>
+        <div>
+            <input type="radio" name="radio1" required>
+            <label for="credit" >Card</label>
+        </div>
+
+        <div class="formGroup">
+            <h3>Choose 2 gifts:</h3>
+            <input type="checkbox" id="gift1" name="gift1" value="gift" class="check">
+            <label for="gift1"> Pack as a gift</label><br>
+            <input type="checkbox" id="gift2" name="gift2" value="postcard" class="check">
+            <label for="gift2"> Add postcard</label><br>
+            <input type="checkbox" id="gift3" name="gift3" value="discount" class="check">
+            <label for="gift3"> Provide 2% discount to the next time</label><br>
+            <input type="checkbox" id="gift4" name="gift4" value="pen" class="check">
+            <label for="gift4"> Branded pen or pencil</label>
+        </div>
+
+        <div>
+            <button id="btn" class="submit-button">Complete</button>
+        </div>
+
+
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
